@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sanjeev Kumar — Resume</title>
+<meta name="description" content="Academic resume and activity summary for Sanjeev Kumar, Lake Braddock Secondary School, Class of 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+
+  :root {
+    --paper: #14181F;
+    --ink: #ECEEEA;
+    --ink-soft: #9BA3AD;
+    --rule: #2A313C;
+    --accent: #D9A94E;
+    --accent-rgb: 217,169,78;
+    --accent-soft: rgba(217,169,78,0.13);
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 64px); }
+
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 4.5rem 1.5rem 5rem; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    header.masthead { animation: rise 0.6s ease-out; }
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  h1.name {
+    font-family: 'Newsreader', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.25rem, 5vw, 2.9rem);
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .mark { width: 64px; height: 3px; background: var(--accent); margin: 1rem 0 1.2rem; border-radius: 2px; }
+  @media (prefers-reduced-motion: no-preference) {
+    .mark { animation: pulse-glow 3.4s ease-in-out infinite; }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 rgba(var(--accent-rgb), 0); }
+    50% { opacity: 0.72; box-shadow: 0 0 9px rgba(var(--accent-rgb), 0.6); }
+  }
+
+  .byline { margin: 0; color: var(--ink-soft); font-size: 1.02rem; }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 1.25rem 1.5rem;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 1.15rem 0;
+    margin-top: 1.8rem;
+  }
+  .stat .label { display: block; font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0.3rem; }
+  .stat .value {
+    display: block;
+    font-family: 'IBM Plex Mono', 'SF Mono', Consolas, 'Liberation Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--ink);
+    transition: color .2s ease;
+  }
+  .stat .value.text { font-family: 'IBM Plex Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 1.02rem; }
+  .stat:hover .value { color: var(--accent); }
+
+  header.masthead { margin-bottom: 2.5rem; }
+
+  /* sticky section nav */
+  .toc {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    padding: 0.85rem 0;
+    margin-bottom: 3rem;
+  }
+  .toc-links { display: flex; gap: 1.25rem; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
+  .toc-links::-webkit-scrollbar { display: none; }
+  .toc-links a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.88rem;
+    white-space: nowrap;
+    padding: 0.2rem 0.05rem;
+    border-bottom: 2px solid transparent;
+    transition: color .2s ease, border-color .2s ease;
+  }
+  .toc-links a:hover, .toc-links a.active { color: var(--ink); border-bottom-color: var(--accent); }
+
+  .toc-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: transparent; }
+  .toc-progress-bar { height: 100%; width: 0%; background: var(--accent); }
+
+  section.block { margin-bottom: 3.25rem; }
+  section.block:last-of-type { margin-bottom: 0; }
+
+  .tick { width: 32px; height: 2px; background: var(--ink-soft); opacity: 0.55; margin-bottom: 1rem; }
+
+  h2 {
+    font-family: 'Newsreader', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0 0 1.15rem;
+    color: var(--ink);
+    scroll-margin-top: 4px;
+  }
+
+  /* math sequence strip */
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem 0.75rem;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 1.3rem 0;
+  }
+  .tl-node { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .tl-grade { font-size: 0.76rem; color: var(--ink-soft); }
+  .tl-dot { width: 9px; height: 9px; border-radius: 50%; border: 2px solid var(--accent); background: var(--paper); transition: background-color .2s ease; }
+  .tl-node:hover .tl-dot { background: var(--accent); }
+  .tl-course { font-size: 0.86rem; line-height: 1.35; color: var(--ink); }
+  .tl-course small { display: block; color: var(--ink-soft); font-size: 0.82em; margin-top: 0.2em; }
+
+  .item {
+    padding: 0.55rem 0.8rem;
+    margin: 0 -0.8rem 1.5rem;
+    border-left: 2px solid transparent;
+    border-radius: 3px;
+    transition: background-color .25s ease, border-color .25s ease;
+  }
+  .item:last-child { margin-bottom: 0; }
+  .item:hover { background: var(--accent-soft); border-left-color: var(--accent); }
+  .item h3 { font-size: 1.05rem; font-weight: 600; margin: 0 0 0.3rem; color: var(--ink); }
+  .item p { margin: 0; max-width: 62ch; }
+
+  ul.honors { margin: 0; padding: 0; list-style: none; }
+  ul.honors li {
+    padding: 0.7rem 0.6rem;
+    margin: 0 -0.6rem;
+    border-bottom: 1px solid var(--rule);
+    border-radius: 3px;
+    transition: background-color .2s ease;
+  }
+  ul.honors li:hover { background: var(--accent-soft); }
+  ul.honors li:last-child { border-bottom: none; }
+
+  /* scroll-triggered reveal system */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    section.block .tick.reveal { width: 0; opacity: 1; transform: none; transition: width .5s ease; }
+    section.block .tick.reveal.is-visible { width: 32px; }
+    .reveal-node { opacity: 0; transform: scale(0.8); transition: opacity .4s ease, transform .4s ease; }
+    .reveal-node.is-visible { opacity: 1; transform: scale(1); }
+  }
+
+  @media (max-width: 560px) {
+    .stats { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .timeline { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media print {
+    body { background: #fff; color: #000; }
+    .toc, .toc-progress { display: none; }
+    .reveal, .reveal-node { opacity: 1 !important; transform: none !important; width: auto !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <h1 class="name">Sanjeev Kumar</h1>
+    <div class="mark"></div>
+    <p class="byline">Lake Braddock Secondary School, Class of 2027</p>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="label">Weighted GPA</span>
+        <span class="value"><span class="cu" data-target="4.47" data-decimals="2">4.47</span></span>
+      </div>
+      <div class="stat">
+        <span class="label">Unweighted GPA</span>
+        <span class="value"><span class="cu" data-target="3.92" data-decimals="2">3.92</span></span>
+      </div>
+      <div class="stat">
+        <span class="label">SAT</span>
+        <span class="value"><span class="cu" data-target="1540" data-decimals="0">1540</span></span>
+      </div>
+      <div class="stat">
+        <span class="label">National Merit</span>
+        <span class="value text">Commended Scholar</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Section navigation">
+    <div class="toc-links">
+      <a href="#math">Math</a>
+      <a href="#research">Research</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#awards">Awards</a>
+      <a href="#writing">Writing</a>
+    </div>
+    <div class="toc-progress"><div class="toc-progress-bar" id="progressBar"></div></div>
+  </nav>
+
+  <main>
+    <section class="block" id="math">
+      <div class="tick"></div>
+      <h2>Math background</h2>
+      <div class="timeline">
+        <div class="tl-node">
+          <span class="tl-grade">9th grade</span>
+          <span class="tl-dot"></span>
+          <span class="tl-course">AP Precalculus</span>
+        </div>
+        <div class="tl-node">
+          <span class="tl-grade">10th grade</span>
+          <span class="tl-dot"></span>
+          <span class="tl-course">AP Calculus BC</span>
+        </div>
+        <div class="tl-node">
+          <span class="tl-grade">11th grade</span>
+          <span class="tl-dot"></span>
+          <span class="tl-course">Multivariable Calc &amp; Linear Algebra</span>
+        </div>
+        <div class="tl-node">
+          <span class="tl-grade">12th grade</span>
+          <span class="tl-dot"></span>
+          <span class="tl-course">Discrete Math<small>GMU</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="research">
+      <div class="tick"></div>
+      <h2>Research &amp; technical projects</h2>
+      <div class="item">
+        <h3>Pancreatic cancer detection model</h3>
+        <p>Built a machine learning model to help detect pancreatic ductal adenocarcinoma (PDAC). The project won a medal at the Fairfax County Regional Science Fair.</p>
+      </div>
+      <div class="item">
+        <h3>Astronomy research with Randolph College</h3>
+        <p>Worked with professor at Randolph College on a neural network model that extrapolates as much data as possible from given exoplanet light curves.</p>
+      </div>
+      <div class="item">
+        <h3>Fish</h3>
+        <p>Built a website where visitors can play the classic card game Fish against standard AI opponents and other people online.</p>
+      </div>
+    </section>
+
+    <section class="block" id="leadership">
+      <div class="tick"></div>
+      <h2>Leadership &amp; impact</h2>
+      <div class="item">
+        <h3>President, Computer Science Club</h3>
+        <p>Leads Lake Braddock's Computer Science Club as president.</p>
+      </div>
+      <div class="item">
+        <h3>President, Math Olympiad Club</h3>
+        <p>Currently leading a fundraising initiative that raised thousands of dollars to fund countywide access to the AMC for every student in Fairfax County.</p>
+      </div>
+      <div class="item">
+        <h3>Founder and president, Geography Olympiad Club</h3>
+        <p>Founded and leads the school's Geography Olympiad Club.</p>
+      </div>
+      <div class="item">
+        <h3>Science Olympiad</h3>
+        <p>Member of Lake Braddock's state team, mentoring students in Astronomy and Rocks &amp; Minerals.</p>
+      </div>
+      <div class="item">
+        <h3>Tutoring</h3>
+        <p>Has tutored for more than 700 hours in math and science.</p>
+      </div>
+    </section>
+
+    <section class="block" id="awards">
+      <div class="tick"></div>
+      <h2>Awards &amp; honors</h2>
+      <ul class="honors">
+        <li>Commended National Merit Scholar</li>
+        <li>USACO Silver Division</li>
+        <li>2nd place, TJ IOI</li>
+        <li>Fairfax County Regional Science Fair medalist</li>
+        <li>Five-time Science Olympiad state medalist</li>
+        <li>Virginia Governor's School for Mathematics, Science, and Technology, alumnus</li>
+      </ul>
+    </section>
+
+    <section class="block" id="writing">
+      <div class="tick"></div>
+      <h2>Writing</h2>
+      <div class="item">
+        <h3>AP Chemistry study guide</h3>
+        <p>Wrote a 300-page AP Chemistry study guide, currently in the process of publication.</p>
+      </div>
+      <div class="item">
+        <h3>Documentary</h3>
+        <p>Produced a documentary on the Bosnian Genocide featuring an interview conducted with a Bosnian refugee.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // count-up stats
+  if (!reduceMotion) {
+    document.querySelectorAll('.cu').forEach(function(el){
+      var target = parseFloat(el.getAttribute('data-target'));
+      var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+      if (isNaN(target)) return;
+      el.textContent = (0).toFixed(decimals);
+      var duration = 1100;
+      var start = null;
+      function tick(ts){
+        if (start === null) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = (target * eased).toFixed(decimals);
+        if (progress < 1) { requestAnimationFrame(tick); }
+        else { el.textContent = target.toFixed(decimals); }
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+
+  // active section highlighting
+  var links = document.querySelectorAll('.toc-links a');
+  function linkFor(id){ return document.querySelector('.toc-links a[href="#' + id + '"]'); }
+  var sections = document.querySelectorAll('main section[id]');
+  if ('IntersectionObserver' in window) {
+    var navObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (!entry.isIntersecting) return;
+        var link = linkFor(entry.target.id);
+        if (!link) return;
+        links.forEach(function(l){ l.classList.remove('active'); });
+        link.classList.add('active');
+      });
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+    sections.forEach(function(s){ navObserver.observe(s); });
+  }
+
+  // scroll-triggered reveal: each section's own children (and math timeline's
+  // dots) fade and rise into place, staggered, the first time they're scrolled to
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    sections.forEach(function(sec){
+      Array.prototype.forEach.call(sec.children, function(child, i){
+        child.classList.add('reveal');
+        child.style.transitionDelay = (i * 70) + 'ms';
+      });
+      var nodes = sec.querySelectorAll('.tl-node');
+      nodes.forEach(function(n, i){
+        n.classList.add('reveal-node');
+        n.style.transitionDelay = (260 + i * 90) + 'ms';
+      });
+    });
+    var revealObserver = new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(entry){
+        if (!entry.isIntersecting) return;
+        entry.target.querySelectorAll('.reveal, .reveal-node').forEach(function(k){
+          k.classList.add('is-visible');
+        });
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    sections.forEach(function(s){ revealObserver.observe(s); });
+  }
+
+  // scroll progress
+  var bar = document.getElementById('progressBar');
+  var ticking = false;
+  function updateProgress(){
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking) { requestAnimationFrame(updateProgress); ticking = true; }
+  }, { passive: true });
+  updateProgress();
+})();
+</script>
+</body>
+</html>
